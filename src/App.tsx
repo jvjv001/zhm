@@ -8,6 +8,7 @@ const CoursesPage = lazy(() => import("@/pages/CoursesPage"));
 const CourseDetailPage = lazy(() => import("@/pages/CourseDetailPage"));
 const LearningModulePage = lazy(() => import("@/pages/LearningModulePage"));
 const ExercisePage = lazy(() => import("@/pages/ExercisePage"));
+const QuizPage = lazy(() => import("@/pages/QuizPage"));
 const DashboardPage = lazy(() => import("@/pages/DashboardPage"));
 const InstructorDashboardPage = lazy(() => import("@/pages/InstructorDashboardPage"));
 
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/courses/:courseId" element={<CourseDetailPage />} />
           <Route path="/learn/:courseId/:moduleId/:lessonId" element={<LearningModulePage />} />
           <Route path="/exercise/:courseId/:moduleId/:exerciseId" element={<ExercisePage />} />
+          <Route path="/quiz/:courseId/:moduleId/:quizId" element={<QuizPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/instructor" element={<InstructorDashboardPage />} />
           <Route path="/other" element={<div className="text-center text-xl">Other Page - Coming Soon</div>} />
