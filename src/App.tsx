@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/courses" element={<CoursesPage />} />
-          <Route path="/courses/:id" element={<CourseDetailPage />} />
+          <Route path="/courses/:courseId" element={<CourseDetailPage />} />
           <Route path="/learn/:courseId/:moduleId/:lessonId" element={<LearningModulePage />} />
           <Route path="/exercise/:courseId/:moduleId/:exerciseId" element={<ExercisePage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
