@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 interface CategoryProps {
@@ -23,56 +22,67 @@ const Category: React.FC<CategoryProps> = ({ title, description, icon, color, li
 const CourseCategories: React.FC = () => {
   const categories = [
     {
-      title: 'Python编程基础',
-      description: '掌握Python核心语法、流程控制、数据结构和函数基础',
+      title: 'Python数据分析',
+      description: '掌握Python编程，学习NumPy、Pandas等数据分析库',
       icon: (
         <svg className="h-12 w-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
       ),
       color: 'border-blue-500',
-      link: '/courses/python-basics'
+      link: '/courses/python-data-analysis'
     },
     {
-      title: 'Python核心进阶',
-      description: '学习文件操作、模块与包、面向对象编程和异常处理',
+      title: 'Excel商务统计',
+      description: '学习Excel函数、图表和数据透视表，提升办公效率',
       icon: (
         <svg className="h-12 w-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
         </svg>
       ),
       color: 'border-green-500',
-      link: '/courses/python-advanced'
+      link: '/courses/excel-business-statistics'
     },
     {
-      title: '高级特性与工程实践',
-      description: '掌握函数式编程、迭代器、生成器、装饰器和并发编程',
+      title: 'SQL数据库',
+      description: '学习SQL查询和数据库操作，为数据分析打下基础',
       icon: (
         <svg className="h-12 w-12 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
         </svg>
       ),
       color: 'border-purple-500',
-      link: '/courses/python-expert'
+      link: '/courses/sql'
     },
     {
-      title: '专项技能与应用',
-      description: '学习数据处理、可视化、文本处理、Web开发和自动化',
+      title: '数据可视化',
+      description: '学习Matplotlib、Plotly等工具，创建美观图表',
       icon: (
         <svg className="h-12 w-12 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
       ),
       color: 'border-orange-500',
-      link: '/courses/python-applications'
+      link: '/courses/data-visualization'
+    },
+    {
+      title: '商务实战',
+      description: '通过真实商业案例，综合应用所学知识',
+      icon: (
+        <svg className="h-12 w-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+      color: 'border-red-500',
+      link: '/courses/business-practice'
     }
   ];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">课程分类</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <h2 className="text-3xl font-bold text-center mb-12">课程体系</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {categories.map((category, index) => (
             <Category
               key={index}

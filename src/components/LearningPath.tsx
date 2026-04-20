@@ -24,32 +24,39 @@ const PathStep: React.FC<PathStepProps> = ({ title, description, number, color, 
 const LearningPath: React.FC = () => {
   const pathSteps = [
     {
-      title: 'Python编程基础',
-      description: '掌握核心语法、流程控制、数据结构和函数基础',
+      title: 'Python数据分析',
+      description: '掌握Python编程和数据分析库',
       number: '1',
       color: 'bg-blue-50 border border-blue-200',
-      link: '/courses/python-basics'
+      link: '/courses/python-data-analysis'
     },
     {
-      title: 'Python核心进阶',
-      description: '学习文件操作、模块与包、面向对象编程和异常处理',
+      title: 'Excel商务统计',
+      description: '学习Excel函数和数据处理',
       number: '2',
       color: 'bg-green-50 border border-green-200',
-      link: '/courses/python-advanced'
+      link: '/courses/excel-business-statistics'
     },
     {
-      title: '高级特性与工程实践',
-      description: '掌握函数式编程、迭代器、生成器、装饰器和并发编程',
+      title: 'SQL数据库',
+      description: '掌握SQL查询和数据库操作',
       number: '3',
       color: 'bg-purple-50 border border-purple-200',
-      link: '/courses/python-expert'
+      link: '/courses/sql'
     },
     {
-      title: '专项技能与应用',
-      description: '学习数据处理、可视化、文本处理、Web开发和自动化',
+      title: '数据可视化',
+      description: '创建美观的数据分析图表',
       number: '4',
       color: 'bg-orange-50 border border-orange-200',
-      link: '/courses/python-applications'
+      link: '/courses/data-visualization'
+    },
+    {
+      title: '商务实战',
+      description: '通过真实案例综合应用',
+      number: '5',
+      color: 'bg-red-50 border border-red-200',
+      link: '/courses/business-practice'
     }
   ];
 
@@ -57,7 +64,7 @@ const LearningPath: React.FC = () => {
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">学习路径</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {pathSteps.map((step, index) => (
             <PathStep
               key={index}
@@ -71,7 +78,7 @@ const LearningPath: React.FC = () => {
         </div>
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-6">
-            按照学习路径循序渐进，掌握Python数据分析的完整技能体系
+            按路径循序渐进，掌握完整的商务数据分析技能
           </p>
           <Link to="/courses" className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
             查看完整课程体系
