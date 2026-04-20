@@ -336,6 +336,27 @@ export const courses: Course[] = [
             duration: '25分钟',
             content: '学习使用Matplotlib创建基本的图表，如折线图、柱状图和散点图。',
           },
+          {
+            id: 'analysis-lesson-4',
+            title: 'Python爬虫实战',
+            type: 'text',
+            duration: '35分钟',
+            content: '学习使用Python构建爬虫，收集网络数据并进行分析。',
+          },
+          {
+            id: 'analysis-lesson-5',
+            title: '数据脱敏技术',
+            type: 'text',
+            duration: '30分钟',
+            content: '学习使用Python实现数据脱敏，保护敏感信息。',
+          },
+          {
+            id: 'analysis-lesson-6',
+            title: '线性关系可视化',
+            type: 'text',
+            duration: '30分钟',
+            content: '学习使用Python可视化线性关系，分析变量之间的相关性。',
+          },
         ],
         exercises: [
           {
@@ -359,6 +380,27 @@ export const courses: Course[] = [
               },
             ],
           },
+          {
+            id: 'analysis-exercise-2',
+            title: 'Python实战练习',
+            type: 'choice',
+            questions: [
+              {
+                id: 'a3',
+                question: 'Python中用于网络爬虫的库是？',
+                options: ['requests', 'numpy', 'pandas', 'matplotlib'],
+                answer: 'requests',
+                explanation: 'requests库用于发送HTTP请求，是爬虫的基础库。',
+              },
+              {
+                id: 'a4',
+                question: '以下哪个不是数据脱敏的方法？',
+                options: ['替换', '加密', '删除', '复制'],
+                answer: '复制',
+                explanation: '复制不是数据脱敏的方法，其他选项都是常见的数据脱敏方法。',
+              },
+            ],
+          },
         ],
         quizzes: [
           {
@@ -378,6 +420,13 @@ export const courses: Course[] = [
                 options: ['折线图', '柱状图', '散点图', '饼图'],
                 answer: '散点图',
                 explanation: '散点图可以展示两个变量之间的关系。',
+              },
+              {
+                id: 'aq3',
+                question: 'Python中用于解析HTML的库是？',
+                options: ['beautifulsoup4', 'requests', 'numpy', 'pandas'],
+                answer: 'beautifulsoup4',
+                explanation: 'beautifulsoup4库用于解析HTML和XML文档。',
               },
             ],
           },
